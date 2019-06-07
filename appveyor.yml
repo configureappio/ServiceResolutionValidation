@@ -5,11 +5,15 @@ branches:
   only:
   - InitialCommit
 image: Visual Studio 2019
+configuration: Release
+platform: Any CPU
+before_build:
+- cmd: dotnet restore
 build:
   project: ServiceResolution.sln
   publish_nuget: true
   include_nuget_references: true
-  verbosity: minimal
+  verbosity: detailed
 notifications:
 - provider: Email
   to:
