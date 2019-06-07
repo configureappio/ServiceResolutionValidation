@@ -4,7 +4,9 @@ pull_requests:
 branches:
   only:
   - InitialCommit
+image: Visual Studio 2019
 build:
+  project: ServiceResolution.sln
   publish_nuget: true
   include_nuget_references: true
   verbosity: minimal
