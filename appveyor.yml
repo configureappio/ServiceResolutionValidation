@@ -7,14 +7,12 @@ branches:
 image: Visual Studio 2019
 configuration: Release
 platform: Any CPU
-nuget:
-  account_feed: true
-  project_feed: true
 before_build:
 - cmd: dotnet restore
 build:
   project: ServiceResolution.sln
   publish_nuget: true
+  include_nuget_references: true
   verbosity: detailed
 notifications:
 - provider: Email
