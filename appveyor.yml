@@ -11,6 +11,7 @@ before_build:
 - cmd: dotnet restore
 build:
   project: ServiceResolution.sln
+  publish_nuget: true
   verbosity: detailed
 notifications:
 - provider: Email
