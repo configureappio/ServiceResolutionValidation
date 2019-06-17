@@ -18,7 +18,7 @@ deploy:
   api_key: 3fx776yxg61m7nvj51ssu5bu    
   skip_symbols: false
   symbol_server:           # remove to push symbols to SymbolSource.org
-  artifact: /.*\.nupkg/  
+  artifact: src/ServiceResolution/bin/Release/*.nupkg/  
   
 notifications:
 - provider: Email
