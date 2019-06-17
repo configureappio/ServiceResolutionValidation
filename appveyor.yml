@@ -13,7 +13,7 @@ build:
   project: ServiceResolution.sln 
   verbosity: detailed
 artifacts:
-- path: subdir\**\*.nupkg
+- path: **\*.nupkg
 deploy:
   provider: NuGet
   server: https://ci.appveyor.com/nuget/configureappio-q2ljbk9rvmw3/api/v2/package                 # remove to push to NuGet.org
