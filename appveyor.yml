@@ -12,15 +12,15 @@ before_build:
 build:
   project: ServiceResolution.sln 
   verbosity: detailed
-after_build:
-  - ps: Get-ChildItem .\*.nupkg | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
+artifacts:
+- path: subdir\**\*.nupkg
 deploy:
   provider: NuGet
   server: https://ci.appveyor.com/nuget/configureappio-q2ljbk9rvmw3/api/v2/package                 # remove to push to NuGet.org
   api_key: 3fx776yxg61m7nvj51ssu5bu    
   skip_symbols: false
   symbol_server:           # remove to push symbols to SymbolSource.org
-  artifact: s/.*\.nupkg/
+  artifact: /.*\.nupkg/
 
 notifications:
 - provider: Email
