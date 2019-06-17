@@ -15,8 +15,7 @@ build:
 deploy:
   provider: NuGet
   server: https://ci.appveyor.com/nuget/configureappio-q2ljbk9rvmw3/api/v2/package                 # remove to push to NuGet.org
-  api_key:
-    secure: 3fx776yxg61m7nvj51ssu5bu
+  api_key: 3fx776yxg61m7nvj51ssu5bu    
   skip_symbols: false
   symbol_server:           # remove to push symbols to SymbolSource.org
   artifact: /.*\.nupkg/  
