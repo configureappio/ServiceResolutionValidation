@@ -12,7 +12,7 @@ before_build:
 build:
   project: ServiceResolution.sln 
   verbosity: detailed
- after_build:
+after_build:
   - ps: Get-ChildItem .\*.nupkg | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
 deploy:
   provider: NuGet
