@@ -16,9 +16,9 @@ artifacts:
 - path: \**\*.nupkg
 deploy:
   provider: NuGet
-  server: https://ci.appveyor.com/nuget/configureappio-q2ljbk9rvmw3                 # remove to push to NuGet.org
+  server: https://ci.appveyor.com/nuget/serviceresolutionvalidation-43qdn8o510gx                 # remove to push to NuGet.org
   api_key: 
-    secure: mvu3qb8IMGLS3VENnAq9Ew+kKlkRhHK13OW4W3T8gTE=
+    secure: bUV3zJvH2MOyXCOYl73OnglvRIaow6MpuUtc+lDeuEU=
   skip_symbols: false
   symbol_server:           # remove to push symbols to SymbolSource.org
   artifact: /.*\.nupkg/
